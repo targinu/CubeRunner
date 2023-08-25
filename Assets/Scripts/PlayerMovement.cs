@@ -20,13 +20,13 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(0, 0, forwardForce * Time.deltaTime);
 
         //adiciona a variacel sidewaysForce no "x"
-        if (Input.GetKey("d"))
+        if (Input.GetKey("d") || Input.GetKey(KeyCode.RightArrow))
         {
             rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
-        //adiciona a variacel sidewaysForce no "x", valor negativo para se movimentar para a dire��o oposta
-        if (Input.GetKey("a"))
+        //adiciona a variacel sidewaysForce no "x", valor negativo para se movimentar para a direcao oposta
+        if (Input.GetKey("a") || Input.GetKey(KeyCode.LeftArrow))
         {
             rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
